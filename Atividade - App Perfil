@@ -1,0 +1,59 @@
+import React from 'react';
+import { StyleSheet, Text, View, Image, StatusBar } from 'react-native';
+export default function App() {
+return (
+<View style={styles.container}>
+<StatusBar barStyle="light-content" backgroundColor="#1f1f1f" />
+<View style={styles.card}>
+<Image
+source={{ uri: 'https://imgs.search.brave.com/fTn7j6cWyHBc6Avs3X645FoO9BeapMMGbrs41tL7H6g/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3RpL2ZvdG9z/LWdyYXRpcy90Mi8y/Mjk2MzQ5OC11bWEt/bW9kZXJuby1nYXRv/LXZlc3RpbmRvLXVt/YS1vLW5lZ29jaW8t/dGVybm8tZS1vY3Vs/b3MtZGUtc29sLWNy/aWFkYS1jb20tZ2Vu/ZXJhdGl2by1haS10/ZWNub2xvZ2lhLWZv/dG8uanBn' }}
+style={styles.profileImage}
+/>
+<Text style={styles.name}>Willams Matheus</Text>
+<Text style={styles.phrase}>“Formadoo em Nada”</Text>
+</View>
+</View>
+);
+}
+const styles = StyleSheet.create({
+container: {
+    flex: 1,
+    backgroundColor: '#121212',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 16,
+},
+card: {
+    backgroundColor: '#1f1f1f',
+    borderRadius: 20,
+    padding: 24,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOpacity: 0.3,
+    shadowRadius: 10,
+    elevation: 10,
+    width: '100%',
+    maxWidth: 320,
+},
+profileImage: {
+    width: 120,
+    height: 120,
+
+    borderRadius: 60,
+    marginBottom: 16,
+    borderWidth: 2,
+    borderColor: '#00d1ff',
+},
+name: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#ffffff',
+    marginBottom: 8,
+},
+phrase: {
+    fontSize: 16,
+    fontStyle: 'italic',
+    color: '#cccccc',
+    textAlign: 'center',
+},
+});
